@@ -24,7 +24,12 @@ public class Contacto {
     }
     
     public boolean validar() {
-        return false;
+        return !nombre.trim().isEmpty() && !telefono.trim().isEmpty() && tipo!=null;
+    }
+    
+    @Override
+    public String toString() {
+        return  nombre;
     }
 
     @Override

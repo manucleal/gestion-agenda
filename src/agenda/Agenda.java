@@ -15,6 +15,15 @@ public class Agenda {
     }
     
     public boolean crearContacto(String nombre, String telefono, Tipo tipo){
-        return false;
+        Contacto contacto = new Contacto(nombre, telefono, tipo);
+        if(!contacto.validar()) return false;
+        if(contactos.contains(contacto)) return false;
+        contactos.add(contacto);
+        return true;
     }  
+
+    public ArrayList<Contacto> getContactos() {
+        return contactos;
+    }
+    
 }

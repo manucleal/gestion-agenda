@@ -18,7 +18,7 @@ public class SistemaUsuarios {
     public Usuario login(String usuario, String password){
         
         for (Usuario u : usuarios){
-            if (usuario == u.getNombre() && password ==u.getPassword()){
+            if (usuario.equals(u.getNombre()) && password.equals(u.getPassword())){
                 return u;
             }
         }

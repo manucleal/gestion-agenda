@@ -34,6 +34,10 @@ public class Usuario {
         return password;
     }
     
+    public String getNombreCompleto(){
+        return nombreCompleto;
+    }
+    
     
     
 }
